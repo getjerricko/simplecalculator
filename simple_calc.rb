@@ -44,7 +44,12 @@ def multiply(a, b)
 end
 
 def divide(a, b)
-  a.to_f / b.to_f
+  # a.to_f / b.to_f
+  if a.to_f % b.to_f == 0
+    a.to_i / b.to_i         # no decimal 
+  else
+    a.to_f / b.to_f         # include decimal
+  end
 end
 
 def calculate(a, b, op)
